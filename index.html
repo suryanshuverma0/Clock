@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1 id="head-1">Time</h1>
+        <div class="time">
+          <p id="time"></p>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="stopwatch">
+          <h1 id="head-2">Stop Watch</h1>
+          <div class="times">
+            <span id="hr">00</span>
+            <span class="txt">:</span>
+            <span id="min">00</span>
+            <span class="txt">:</span>
+            <span id="sec">00</span>
+            <span class="txt">:</span>
+            <span id="milisec">00</span>
+          </div>
+          <div class="buttons">
+            <button id="start-btn" type="button" onclick="start()">
+              Start
+            </button>
+            <button id="stop-btn" type="button" onclick="stop()">Stop</button>
+            <button id="reset-btn" type="button" onclick="reset()">
+              Reset
+            </button>
+          </div>
+        </div>
+
+        <div class="alarm">
+          <h1 id="head-3">Alarm</h1>
+          <div class="alarm-clock">
+            <div class="alarm-input">
+              <div class="form">
+                <input
+                  type="number"
+                  min="0"
+                  max="12"
+                  name="hour"
+                  value="hour"
+                  id="hour"
+                  aria-label="hour"
+                  placeholder="Enter Houe"
+                  required
+                />
+                <input
+                  type="number"
+                  min="0"
+                  max="60"
+                  name="minute"
+                  value="minute"
+                  id="minute"
+                  aria-label="minute"
+                  placeholder="Enter Minute"
+                  required
+                />
+                <input
+                  type="number"
+                  min="0"
+                  max="60"
+                  name="second"
+                  value="second"
+                  id="second"
+                  aria-label="second"
+                  placeholder="Enter Second"
+                  required
+                />
+
+                <select name="zone" required aria-label="Time Zone">
+                  <option value="" selected disabled>Zone</option>
+                  <option value="AM">AM</option>
+                  <option value="PM">PM</option>
+                </select>
+
+                <button id="set" type="button">Set</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

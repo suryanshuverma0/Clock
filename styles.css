@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.heading {
+  text-align: center;
+  background-color: bisque;
+}
+.heading h1 {
+  font-size: 55px;
+  padding-top: 35px;
+  font-weight: 800;
+}
+#head-1 {
+  font-size: 56px;
+}
+#head-2 {
+  font-size: 56px;
+  padding: 22px;
+}
+.time {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+#time {
+  background-color: aqua;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 35px;
+  margin: 50px;
+  width: 30%;
+}
+#time:hover {
+  transition: 0.4s;
+  transform: scale(2);
+}
+.stopwatch {
+  text-align: center;
+  padding: 25px;
+  margin: 30px;
+  background-color: darkgray;
+}
+.times {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 56px;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+#start-btn {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  font-size: 28px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 8);
+  cursor: pointer;
+}
+#start-btn:hover {
+  background-color: darkgreen;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+#stop-btn {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  font-size: 28px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 8);
+  cursor: pointer;
+}
+#stop-btn:hover {
+  background-color: darkred;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+#reset-btn {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  font-size: 28px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 8);
+  cursor: pointer;
+}
+#reset-btn:hover {
+  background-color: darkblue;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+.alarm {
+  background-color: lightgreen;
+}
+#head-3 {
+  text-align: center;
+  font-size: 64px;
+  padding: 25px;
+}
+.form {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+.form input[type="number"] {
+  font-size: 40px;
+  padding: 12px;
+  margin: 8px;
+  width: 40%;
+  border-radius: 15px;
+  background-color: lightgreen;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.form select {
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 15px;
+  background-color: lightgreen;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  color: #333;
+  appearance: none;
+  width: 40%;
+}
+#set {
+  font-size: 45px;
+  padding: 12px;
+  width: 40%;
+  margin: 40px;
+  background-color: red;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
+}
+#set:hover {
+  background-color: brown;
+  transition: 0.3s;
+  transform: scale(1.2);
+}
