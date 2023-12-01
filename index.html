@@ -49,7 +49,7 @@
                   min="0"
                   max="12"
                   name="hour"
-                  value="hour"
+                  value="0"
                   id="hour"
                   aria-label="hour"
                   placeholder="Enter Houe"
@@ -60,7 +60,7 @@
                   min="0"
                   max="60"
                   name="minute"
-                  value="minute"
+                  value="0"
                   id="minute"
                   aria-label="minute"
                   placeholder="Enter Minute"
@@ -71,18 +71,19 @@
                   min="0"
                   max="60"
                   name="second"
-                  value="second"
+                  value="0"
                   id="second"
                   aria-label="second"
                   placeholder="Enter Second"
                   required
                 />
 
-                <select name="zone" required aria-label="Time Zone">
-                  <option value="" selected disabled>Zone</option>
-                  <option value="AM">AM</option>
-                  <option value="PM">PM</option>
-                </select>
+                <audio
+                  src="ring2-mp3-6551.mp3"
+                  id="tone"
+                  aria-label="tone"
+                  hidden
+                ></audio>
 
                 <button id="set" type="button">Set</button>
               </div>
@@ -90,6 +91,14 @@
           </div>
         </div>
       </div>
+      <footer>
+        <div class="footer">
+          <p>
+            &copy;All Copyright Reserved By
+            <a href="https://www.suryanshu.com.np/">Suryanshu Verma</a>
+          </p>
+        </div>
+      </footer>
     </div>
   </body>
   <script src="main.js"></script>

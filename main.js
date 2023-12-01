@@ -1,3 +1,4 @@
+//for time
 function updateTime() {
   const time = new Date();
   const currentTime = document.getElementById("time");
@@ -18,13 +19,16 @@ function updateTime() {
   if (currentSecond < 10) {
     currentSecondString = "0" + currentSecond;
   }
-  const formatted_time =
+  var formatted_time =
     currentHourString + ":" + currentMinutestring + ":" + currentSecondString;
   currentTime.innerHTML = formatted_time;
+
+  return formatted_time;
 }
 updateTime();
 setInterval(updateTime, 1000);
 
+//for stopwatch
 const startBtn = document.getElementById("start-btn");
 const stopBtn = document.getElementById("stop-btn");
 const resetBtn = document.getElementById("reset-btn");
@@ -98,3 +102,48 @@ function stopWatch() {
     setTimeout("stopWatch()", 10);
   }
 }
+
+//alarm
+let inputTime = function () {
+  const selectHour = parseInt(document.getElementById("hour").value, 10);
+  const selectMinute = parseInt(document.getElementById("minute").value, 10);
+  const selectSecond = parseInt(document.getElementById("second").value, 10);
+
+  const selectedDate = new Date();
+  selectedDate.setHours(selectHour);
+  selectedDate.setMinutes(selectMinute);
+  selectedDate.setSeconds(selectSecond);
+
+  return selectedDate;
+};
+const alarm_tone = document.getElementById("tone");
+
+function playAudioRepeatly() {
+  alarm_tone.currentTime = 0;
+  alarm_tone.play();
+  setTimeout(stopAudio, 10000);
+}
+function stopAudio() {
+  alarm_tone.pause();
+}
+function checkAlarm() {
+  const time = new Date();
+
+  let currentHour = time.getHours();
+  let currentMinute = time.getMinutes();
+  let currentSecond = time.getSeconds();
+
+  const selectedDate = inputTime();
+  if (
+    selectedDate.getHours() === currentHour &&
+    selectedDate.getMinutes() === currentMinute &&
+    selectedDate.getSeconds() === currentSecond
+  ) {
+    alarm_tone.addEventListener("ended", playAudioRepeatly);
+    playAudioRepeatly();
+  }
+}
+
+const set_btn = document.getElementById("set");
+set_btn.addEventListener("click", inputTime);
+setInterval(checkAlarm, 1000);

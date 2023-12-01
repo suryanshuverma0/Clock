@@ -3,10 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  background-color: bisque;
+}
 .heading {
   text-align: center;
-  background-color: bisque;
 }
 .heading h1 {
   font-size: 55px;
@@ -26,8 +27,8 @@
   justify-content: center;
 }
 #time {
-  background-color: aqua;
   border: none;
+  font-weight: 900;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
   border-radius: 12px;
   padding: 15px;
@@ -36,13 +37,12 @@
   width: 30%;
 }
 #time:hover {
+  background-color: #0ef;
   transition: 0.4s;
   transform: scale(2);
 }
 .stopwatch {
   text-align: center;
-  padding: 25px;
-  margin: 30px;
   background-color: darkgray;
   width: 100%;
 }
@@ -53,7 +53,7 @@
   align-items: center;
   padding: 5px;
   margin-bottom: 20px;
-  font-size: 56px;
+  font-size: 8rem;
 }
 .buttons {
   display: flex;
@@ -61,6 +61,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
+  padding-bottom: 15px;
 }
 #start-btn {
   background-color: green;
@@ -104,9 +105,6 @@
   transition: 0.3s;
   transform: scale(1.1);
 }
-.alarm {
-  background-color: lightgreen;
-}
 #head-3 {
   text-align: center;
   font-size: 64px;
@@ -124,18 +122,13 @@
   margin: 8px;
   width: 40%;
   border-radius: 15px;
-  background-color: lightgreen;
+  background-color: transparent;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 }
-.form select {
-  padding: 10px;
-  font-size: 30px;
-  border-radius: 15px;
-  background-color: lightgreen;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
-  color: #333;
-  appearance: none;
-  width: 40%;
+.form input[type="number"]:focus {
+  background-color: #0ef;
+  transition: 0.3s ease;
+  transform: scale(1.2);
 }
 #set {
   font-size: 45px;
@@ -151,4 +144,25 @@
   background-color: brown;
   transition: 0.3s;
   transform: scale(1.2);
+}
+.footer{
+  text-align: center;
+  width: 100%;
+}
+footer{
+  background-color: black;
+  color: white;
+}
+.footer p{
+  font-size: 35px;
+  padding: 20px;
+}
+.footer a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.footer a:hover{
+  color: #0ef;
+  
 }
